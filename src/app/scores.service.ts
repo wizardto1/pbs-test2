@@ -461,7 +461,11 @@ setnote19(note){this.note19=note}
     this.zerocounter+=1
     console.log(this.zerocounter)
   }
+  Reset0(){
+    this.zerocounter=0;
+  }
   GetCounter(){
+    console.log(this.zerocounter)
     return this.zerocounter
   }
 
@@ -561,7 +565,7 @@ setnote19(note){this.note19=note}
         this.time14="-"
         this.time15="-"
   this.test+=1
-
+  this.zerocounter=0;
   return
   }
 

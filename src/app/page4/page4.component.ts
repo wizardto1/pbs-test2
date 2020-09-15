@@ -22,7 +22,13 @@ flag;
      this.scoresService.setnote4(this.note)
      this.scoresService.settime3(this.time)
       this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
       if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test');
         this.router.navigate(['/results']);
       }
       else{

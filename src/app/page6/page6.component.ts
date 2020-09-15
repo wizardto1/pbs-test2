@@ -21,6 +21,16 @@ flag2="-";
      this.scoresService.setnote6(this.note)
      this.scoresService.setLeg3(this.flag2)
      this.scoresService.settime4(this.time)
+       this.scoresService.Up1()
+     if (this.flag='1'){
+        this.scoresService.Reset0()
+     }
+      if (this.scoresService.GetCounter()==3){
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page6']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;
