@@ -1,0 +1,33 @@
+<div class="header"><h1>#13:Four Square 
+Step Test</h1>
+
+   
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Using 4 canes (35 in [90 cm] long), set test up on the floor as shown in the figure below. Handle direction and type of canes do not matter. Have client start in box 1, facing box 2. No assistive device, no assistance, demonstrate task. Allow 1 practice trial. Demonstrate task. Time from start to finish. 
+</p><p>
+<strong>Client:</strong> Step forward into square 2, then sideways to square 3, then backward to square 4, then sideways to square 1, sideways to square 4, forward to square 3, sideways to square 2, and then backward to square 1. I will time you.
+<p>
+  <img src="https://drexel0-my.sharepoint.com/personal/ar88_drexel_edu/Documents/Research/Projects/BERG_Balance/Pictures/FourSquareStep.jpg" style="width:60vh; height:60vh;">
+</div>
+<div class="options"><app-timer></app-timer> <div class="radio-toolbar">
+    <div >Time Recorded (s):<div><input type="text" id="time" value="" (change)="OnInput($event)"> </div> </div>
+      
+
+  Completes Test In :<br>
+  <input type="radio" id="1" name="q15" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≤ 15s               </label>
+  
+  <input type="radio" id="0" name="q15" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput($event)">
+
+  </div>
+<div class="bottom">
+        <button [routerLink]="['/page14']" (click)="setScore15(flag)" style="visibility:hidden"> Back</button>
+      <button [routerLink]="['/page16']" (click)="setScore15(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

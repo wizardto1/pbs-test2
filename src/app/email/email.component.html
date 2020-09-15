@@ -1,0 +1,23 @@
+<div class="header">Email Results</div>
+<div class="body"> <div style="margin:5px; font-family:Lato;">
+<form action="mailto:someone@example.com?subject=Berg Balance test results" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50" style="line-height:30em; word-break: break-word; width:95%" value="Results:">
+<br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+<button [routerLink]="['/results']">
+      Go Back
+    </button>
+    <p> Note:Does not work right now</p></div>
+    
+    
+
+ </div>
+ <div class="header">
+        <button [routerLink]="['/results']"  > Start</button>
