@@ -29,7 +29,7 @@ export class Page2Component implements OnInit {
     this.scoresService.setScore6(1);
     this.scoresService.setScore7(1);
     this.scoresService.Up1();
-   
+  window.alert('Skipping to Question 6');
     this.router.navigate(['/page8']);
     ; }
     else if (flag=="passed"){
@@ -43,7 +43,7 @@ export class Page2Component implements OnInit {
          this.scoresService.setScore10(1);
           this.scoresService.setScore11(1);
            
-                  
+    window.alert('Skipping to Question 10.');
       this.router.navigate(['/page12']);}
     
       }
