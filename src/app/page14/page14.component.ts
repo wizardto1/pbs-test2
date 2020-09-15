@@ -20,6 +20,19 @@ flag;
     this.scoresService.setLeg5(this.flag2)
     this.scoresService.setnote14(this.note)
     this.scoresService.settime10(this.time)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page15']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;

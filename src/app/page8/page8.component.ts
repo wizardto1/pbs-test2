@@ -21,6 +21,19 @@ constructor(private scoresService: ScoresService, private router: Router) { }
      
      this.scoresService.setnote8(this.note)
      this.scoresService.settime6(this.time)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page9']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;

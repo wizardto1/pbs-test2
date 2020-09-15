@@ -19,6 +19,19 @@ export class Page10Component implements OnInit {
     
     this.scoresService.setnote10(this.note)
     this.scoresService.settime8(this.time)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page11']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;

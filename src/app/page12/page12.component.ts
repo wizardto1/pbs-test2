@@ -18,6 +18,19 @@ flag;
     this.scoresService.setButton12(this.buttonDisabled)
     this.scoresService.setnote12(this.note)
     this.scoresService.settime9(this.time)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page13']);
+      }
   }
   OnInput (event:any){
       this.note = event.target.value;

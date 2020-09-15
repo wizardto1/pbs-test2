@@ -17,6 +17,19 @@ note="-";
     this.scoresService.setScore16(flag)
     this.scoresService.setnote16(this.note)
     this.scoresService.settime12(this.time)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page17']);
+      }
     
   }
   OnInput(event:any){

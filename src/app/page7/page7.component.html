@@ -30,6 +30,6 @@ Sit in the middle of the chair, arms across your chest. Stand up and sit down 5 
   
 <div class="bottom">
         <button [routerLink]="['/page6']" (click)="setScore7(flag)" style="visibility:hidden" > Back</button>
-      <button [routerLink]="['/page8']" (click)="setScore7(flag)" [disabled]="!buttonDisabled"> Next</button>
+      <button (click)="setScore7(flag)" [disabled]="!buttonDisabled"> Next</button>
 
  </div>

@@ -28,7 +28,7 @@ flag;
        
      }
       if (this.scoresService.GetCounter()==3){
-        window.alert('Three Consecutive Zeros! Ending Test');
+        window.alert('Three Consecutive Zeros! Ending Test.');
         this.router.navigate(['/results']);
       }
       else{

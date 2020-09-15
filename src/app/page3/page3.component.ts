@@ -16,6 +16,11 @@ note="-";
     this.scoresService.setScore3(flag)
     this.scoresService.setButton3(this.buttonDisabled)
        this.scoresService.Up1();
+      
+      if (this.flag==1){
+        this.scoresService.Reset0()
+     }
+    
      this.scoresService.setnote3(this.note)
      this.scoresService.settime2(this.time)
   }

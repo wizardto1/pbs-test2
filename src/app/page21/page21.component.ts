@@ -18,7 +18,20 @@ flag;
     this.scoresService.setScore21(flag)
     this.scoresService.setLeg8(this.flag2)
     this.scoresService.settime15(this.time) 
-    this.scoresService.setnote21(this.note)    
+    this.scoresService.setnote21(this.note)  
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page22']);
+      }  
   }
   OnInput (event:any){
       this.time = event.target.value;

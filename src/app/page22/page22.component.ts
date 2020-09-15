@@ -14,8 +14,11 @@ flag;
  constructor(private scoresService: ScoresService, private router: Router) { }
 
   setScore22(flag){
-    this.scoresService.setScore22(flag)
-    this.scoresService.setnote22(this.note)
+    this.scoresService.setScore22(flag);
+    this.scoresService.setnote22(this.note);
+    
+      
+      
     
   }
   OnInput (event:any){

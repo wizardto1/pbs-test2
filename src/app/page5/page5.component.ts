@@ -18,7 +18,7 @@ flag;
     this.scoresService.setButton5(this.buttonDisabled)
      this.scoresService.setnote5(this.flag)
      this.scoresService.Up1()
-     if (this.flag='1'){
+     if (this.flag=='1'){
         this.scoresService.Reset0()
      }
       if (this.scoresService.GetCounter()==3){

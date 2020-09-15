@@ -18,6 +18,19 @@ flag;
     this.scoresService.setScore18(flag)
     this.scoresService.setLeg6(this.flag2)
     this.scoresService.setnote18(this.note)
+      this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page19']);
+      }
     
   }
   OnInput2 (event:any){

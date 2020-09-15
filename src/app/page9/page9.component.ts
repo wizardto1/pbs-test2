@@ -19,6 +19,19 @@ note="-";
     
      this.scoresService.settime7(this.time)
     this.scoresService.setnote9(this.note)
+     this.scoresService.Up1();
+    
+      if (this.flag==1){
+        this.scoresService.Reset0()
+       
+     }
+      if (this.scoresService.GetCounter()==3){
+        window.alert('Three Consecutive Zeros! Ending Test.');
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page10']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;
