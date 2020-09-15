@@ -17,7 +17,7 @@ flag;
     this.scoresService.setScore11(flag)
     this.scoresService.setButton11(this.buttonDisabled)
     this.scoresService.setDevice2(this.flag2)
-     this.scoresService.set11Value(flag)
+    
      this.scoresService.setnote11(this.note)
      
   }

@@ -16,7 +16,7 @@ flag2="-";
   setScore7(flag){
     this.scoresService.setScore7(flag)
     this.scoresService.setButton7(this.buttonDisabled)
-     this.scoresService.set7Value(flag)
+     
      this.scoresService.setnote7(this.note)
      this.scoresService.setLeg4(this.flag2)
      this.scoresService.settime5(this.time)

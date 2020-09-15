@@ -26,16 +26,7 @@ export class ScoresService {
   score20:any;
   score21:any;
   score22:any;
-  score3value:any;
-  score4value:any;
-  score5value:any;
-  score6value:any;
-  score7value:any;
-  score8value:any;
-  score9value:any;
-  score10value:any;
-  score11value:any;
-  
+  zerocounter:number=0;
   button1:boolean;
   button2:boolean;
   button3:boolean;
@@ -410,24 +401,6 @@ getLeg3(){return this.leg3}
   getLeg7(){return this.leg7}
   setLeg8(leg){this.leg8=leg;}
   getLeg8(){return this.leg8}
-  set3Value(score){this.score3value=score}
-  get3Value(){return this.score3value}
-   set4Value(score){this.score4value=score}
-  get4Value(){return this.score4value}
-   set5Value(score){this.score5value=score}
-  get5Value(){return this.score5value}
-   set6Value(score){this.score6value=score}
-  get6Value(){return this.score6value}
-   set7Value(score){this.score7value=score}
-  get7Value(){return this.score7value}
-   set8Value(score){this.score8value=score}
-  get8Value(){return this.score8value}
-   set9Value(score){this.score9value=score}
-  get9Value(){return this.score9value}
-   set10Value(score){this.score10value=score}
-  get10Value(){return this.score10value}
-   set11Value(score){this.score11value=score}
-  get11Value(){return this.score11value}
   setnote1(note){this.note1=note}
   getnote1(){return this.note1}
   setnote2(note){this.note2=note}
@@ -510,15 +483,7 @@ setnote19(note){this.note19=note}
   this.score20=0;
   this.score21=0;
   this.score22=0;
-  this.score3value="0";
-  this.score4value="0";
-  this.score5value="0";
-  this.score6value="0";
-  this.score7value="0";
-  this.score8value="0";
-  this.score9value="0";
-  this.score10value="0";
-  this.score11value="0";
+  
   this.button1=false;
   this.button2=false;
   this.button3=false;

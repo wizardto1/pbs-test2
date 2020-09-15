@@ -15,7 +15,7 @@ note="-";
   setScore9(flag){
     this.scoresService.setScore9(flag)
     this.scoresService.setButton9(this.buttonDisabled)
-     this.scoresService.set9Value(flag)
+    
      this.scoresService.settime7(this.time)
     this.scoresService.setnote9(this.note)
   }

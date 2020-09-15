@@ -28,11 +28,7 @@ export class Page2Component implements OnInit {
     this.scoresService.setScore5(1);
     this.scoresService.setScore6(1);
     this.scoresService.setScore7(1);
-    this.scoresService.set3Value("skipped (1)");
-     this.scoresService.set4Value("skipped (1)");
-      this.scoresService.set5Value("skipped (1)");
-       this.scoresService.set6Value("skipped (1)");
-        this.scoresService.set7Value("skipped (1)");
+   
     this.router.navigate(['/page8']);
     ; }
     else if (flag=="passed"){
@@ -45,15 +41,7 @@ export class Page2Component implements OnInit {
         this.scoresService.setScore9(1);
          this.scoresService.setScore10(1);
           this.scoresService.setScore11(1);
-           this.scoresService.set3Value("skipped (1)");
-            this.scoresService.set4Value("skipped (1)");
-             this.scoresService.set5Value("skipped (1)");
-              this.scoresService.set6Value("skipped (1)");
-               this.scoresService.set7Value("skipped (1)");
-               this.scoresService.set8Value("skipped (1)");
-                this.scoresService.set9Value("skipped (1)");
-                 this.scoresService.set10Value("skipped (1)");
-                  this.scoresService.set11Value("skipped (1)");
+           
                   
       this.router.navigate(['/page12']);}
       else{

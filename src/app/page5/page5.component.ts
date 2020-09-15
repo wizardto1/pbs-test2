@@ -15,7 +15,7 @@ flag;
   setScore5(flag){
     this.scoresService.setScore5(flag)
     this.scoresService.setButton5(this.buttonDisabled)
-     this.scoresService.set5Value(flag)
+    
      this.scoresService.setnote5(this.flag)
   }
   OnInput2 (event:any){
