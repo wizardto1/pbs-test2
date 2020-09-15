@@ -45,6 +45,12 @@ export class Page2Component implements OnInit {
                   
       this.router.navigate(['/page12']);}
       else{
+        this.scoresService.setScore3(1);
+        this.scoresService.setScore4(1);
+         this.scoresService.setScore5(1);
+          this.scoresService.setScore6(1);
+           this.scoresService.setScore7(1);
+        this.scoresService.Up1();
         this.router.navigate(['/page3']);}
       }
   OnInput (event:any){

@@ -457,6 +457,13 @@ setnote19(note){this.note19=note}
   settime13(time){this.time13=time}gettime13(){return this.time13}
   settime14(time){this.time14=time}gettime14(){return this.time14}
   settime15(time){this.time15=time}gettime15(){return this.time15}
+  Up1(){
+    this.zerocounter+=1
+    console.log(this.zerocounter)
+  }
+  GetCounter(){
+    return this.zerocounter
+  }
 
 
   reset(){

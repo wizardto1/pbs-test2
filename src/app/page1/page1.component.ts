@@ -22,12 +22,14 @@ export class Page1Component implements OnInit {
     this.scoresService.setLeg1(this.flag2);
     this.scoresService.settime1(this.time);
     this.scoresService.setnote1(this.note);
+    
    
   }
   gotoPage(flag){
     
     if (flag=="no"){
       this.scoresService.setScore2("skipped");
+      this.scoresService.Up1();
     this.router.navigate(['/page3']); }
     else{
       this.router.navigate(['/page2']);}

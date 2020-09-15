@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-page4',
   templateUrl: './page4.component.html',
@@ -10,8 +11,9 @@ flag;
   time="-";
   note="-"
   flag2;
+  router
   buttonDisabled:boolean=false;
-  constructor(private scoresService: ScoresService) { }
+  constructor(private scoresService: ScoresService, private router: Router) { }
 
   setScore4(flag){
     this.scoresService.setScore4(flag)
@@ -19,6 +21,13 @@ flag;
      
      this.scoresService.setnote4(this.note)
      this.scoresService.settime3(this.time)
+      this.scoresService.Up1();
+      if (this.scoresService.GetCounter()==3){
+        this.router.navigate(['/results']);
+      }
+      else{
+        this.router.navigate(['/page5']);
+      }
   }
   OnInput (event:any){
       this.time = event.target.value;
