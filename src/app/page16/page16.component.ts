@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-page16',
   templateUrl: './page16.component.html',
@@ -10,7 +11,7 @@ flag;
 note="-";
   time="-";
   buttonDisabled:boolean=false;
-  constructor(private scoresService: ScoresService) { }
+  constructor(private scoresService: ScoresService, private router: Router) { }
 
   setScore16(flag){
     this.scoresService.setScore16(flag)

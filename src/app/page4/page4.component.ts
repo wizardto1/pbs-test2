@@ -11,7 +11,7 @@ flag;
   time="-";
   note="-"
   flag2;
-  router
+  
   buttonDisabled:boolean=false;
   constructor(private scoresService: ScoresService, private router: Router) { }
 
