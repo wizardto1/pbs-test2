@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
+import { TimeService } from '../time.service';
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
@@ -84,9 +85,10 @@ note9="-";
   note21="-";
   note22="-";
   
-  constructor(private scoresService: ScoresService){ }
+  constructor(private scoresService: ScoresService, private timeService:TimeService){ }
   reset(){
     this.scoresService.reset();
+    this.timeService.returnTime();
   }
   ngOnInit() {
     this.total=this.scoresService.gettotal();

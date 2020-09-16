@@ -62,6 +62,6 @@ reset(){
   this.time=0;
   this.seconds=0;
   this.minutes=0;
-  this.timeService.returnTime();
+  
 }
 }

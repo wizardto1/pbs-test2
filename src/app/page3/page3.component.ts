@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
+import { TimeService } from '../time.service';
 @Component({
   selector: 'app-page3',
   templateUrl: './page3.component.html',
@@ -10,11 +11,12 @@ flag;
 note="-";
   time="-";
   buttonDisabled:boolean=false;
-  constructor(private scoresService: ScoresService) { }
+  constructor(private scoresService: ScoresService, private timeService: TimeService) { }
 
   setScore3(flag){
     this.scoresService.setScore3(flag)
     this.scoresService.setButton3(this.buttonDisabled)
+    this.time=this.timeService.getTime()
        this.scoresService.Up1();
       
       if (this.flag==1){
@@ -24,10 +26,7 @@ note="-";
      this.scoresService.setnote3(this.note)
      this.scoresService.settime2(this.time)
   }
-  OnInput (event:any){
-      this.time = event.target.value;
-      
-    }
+  
   
   OnInput2 (event:any){
       this.note = event.target.value;
@@ -38,6 +37,7 @@ note="-";
   
 this.flag=this.scoresService.getScore3();
 this.buttonDisabled=this.scoresService.getButton3()
+this.time="-"
   }
   radioEventHandler(event:any){
     
