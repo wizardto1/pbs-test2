@@ -33,6 +33,7 @@ flag2="-";
         this.router.navigate(['/results']);
       }
       else{
+        this.timeService.returnTime();
         this.router.navigate(['/page8']);
       }
 

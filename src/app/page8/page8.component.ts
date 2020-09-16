@@ -33,6 +33,7 @@ constructor(private scoresService: ScoresService, private timeService: TimeServi
         this.router.navigate(['/results']);
       }
       else{
+        this.timeService.returnTime();
         this.router.navigate(['/page9']);
       }
   }

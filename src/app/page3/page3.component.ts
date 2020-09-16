@@ -25,6 +25,7 @@ note="-";
     
      this.scoresService.setnote3(this.note)
      this.scoresService.settime2(this.time)
+     this.timeService.returnTime();
   }
   
   

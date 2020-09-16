@@ -34,8 +34,10 @@ export class Page1Component implements OnInit {
       this.scoresService.setScore2("skipped");
       this.scoresService.Up1();
       window.alert('Skipping to Question 1.');
+      this.timeService.returnTime();
     this.router.navigate(['/page3']); }
     else{
+      this.timeService.returnTime();
       this.router.navigate(['/page2']);}
     }
    

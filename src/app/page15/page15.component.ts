@@ -31,6 +31,7 @@ note="-";
         this.router.navigate(['/results']);
       }
       else{
+        this.timeService.returnTime();
         this.router.navigate(['/page16']);
       }
     
@@ -40,6 +41,7 @@ note="-";
       
     }
   OnInput2 (event:any){
+
       this.note = event.target.value;
       
     }

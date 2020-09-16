@@ -31,6 +31,7 @@ export class Page10Component implements OnInit {
         this.router.navigate(['/results']);
       }
       else{
+        this.timeService.returnTime();
         this.router.navigate(['/page11']);
       }
   }
