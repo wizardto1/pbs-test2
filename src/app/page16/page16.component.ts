@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
 import { Router } from '@angular/router';
+import { TimeService } from '../time.service';
 @Component({
   selector: 'app-page16',
   templateUrl: './page16.component.html',
@@ -11,10 +12,11 @@ flag;
 note="-";
   time="-";
   buttonDisabled:boolean=false;
-  constructor(private scoresService: ScoresService, private router: Router) { }
+  constructor(private scoresService: ScoresService, private timeService: TimeService,private router: Router) { }
 
   setScore16(flag){
     this.scoresService.setScore16(flag)
+    this.time=this.timeService.getTime()
     this.scoresService.setnote16(this.note)
     this.scoresService.settime12(this.time)
       this.scoresService.Up1();
@@ -43,6 +45,7 @@ note="-";
   ngOnInit() {
   
 this.flag=this.scoresService.getScore16()
+this.time="-"
 
   }
   radioEventHandler(event:any){
