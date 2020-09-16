@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TimeService } from '../time.service';
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
@@ -14,7 +15,7 @@ export class Page1Component implements OnInit {
   time;
   note="-";
   buttonDisabled:boolean=false;
-  constructor(private scoresService: ScoresService, private router: Router ) { }
+  constructor(private scoresService: ScoresService, private timeService:TimeService, private router: Router ) { }
 
   setScore1(flag){
     this.scoresService.setScore1(flag)
@@ -22,6 +23,7 @@ export class Page1Component implements OnInit {
     this.scoresService.setLeg1(this.flag2);
     this.scoresService.settime1(this.time);
     this.scoresService.setnote1(this.note);
+    console.log(this.time)
     
    
   }
@@ -35,20 +37,20 @@ export class Page1Component implements OnInit {
     else{
       this.router.navigate(['/page2']);}
     }
-    OnInput (event:any){
-      this.time = event.target.value;
-      console.log(this.time)
-    }
+   
     OnInput2 (event:any){
       this.note = event.target.value;
       console.log(this.note)
     }
-  
+  SetTime(event:any){
+    event.target.value=this.timeService.getTime()
+  }
   ngOnInit() {
   
 this.flag=this.scoresService.getScore1()
 this.buttonDisabled=this.scoresService.getButton1()
 this.flag2=this.scoresService.getLeg1()
+this.time=this.timeService.getTime()
   }
   radioEventHandler(event:any){
     

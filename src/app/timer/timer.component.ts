@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TimeService } from '../time.service';
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
@@ -7,16 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private timeService: TimeService) { }
 
   ngOnInit() {
   }
+  display:any=0;
 time: number = 0;
   minutes:number=  0;
   seconds:number= 0;
   play:boolean=false;
   
 interval;
+SetTime(event:any){
+    this.display=event.target.value
+    this.timeService.setTime(this.display)
+  }
 
 
 start() {
@@ -48,6 +53,8 @@ start() {
 stop() {
   this.play = false;
   clearInterval(this.interval);
+  this.timeService.setTime(this.time);
+  this.display=this.time;
 }
 reset(){
   this.play=false;
@@ -55,5 +62,6 @@ reset(){
   this.time=0;
   this.seconds=0;
   this.minutes=0;
+  this.timeService.returnTime();
 }
 }

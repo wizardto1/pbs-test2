@@ -4,4 +4,5 @@
 	<button id="stopTimer" (click)='stop()'>STOP</button>
 	<button id="resetTimer" (click)='reset()'>RESET</button>
 	<span id="time">{{seconds}}s</span>
+     <div >Time Recorded (s):<div><input type="text"  [(ngModel)]="display"(change)="SetTime($event)"> </div> </div>
 </div>
