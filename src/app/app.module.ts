@@ -35,6 +35,7 @@ import { Page22Component } from './page22/page22.component';
 import { ResultsComponent } from './results/results.component';
 import { EmailComponent } from './email/email.component';
 import { ScoresService } from './scores.service';
+import { TimeService } from './time.service';
 
 
 
@@ -47,6 +48,6 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, FormsModule , RouterModule.forRoot(appRoutes)],
   declarations: [ AppComponent, HelloComponent, StartComponent, HomeComponent, HeaderComponent, InfoComponent, Page1Component, TimerComponent, Page2Component, Page3Component, Page4Component, Page5Component, Page6Component, Page7Component, Page8Component, Page9Component, Page10Component, Page11Component, Page12Component, Page13Component, Page14Component, Page15Component, Page16Component, Page17Component, Page18Component, Page19Component, Page20Component, Page21Component, Page22Component, ResultsComponent, EmailComponent,],
   bootstrap:    [ AppComponent ],
-  providers: [ScoresService]
+  providers: [ScoresService, TimeService]
 })
 export class AppModule { }
