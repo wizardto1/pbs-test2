@@ -92,6 +92,7 @@ margin-left: auto;
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: #bfb;
     border-color: #4c4;
+    border-width:thick;
 }
 .time{
   /*background:white;
