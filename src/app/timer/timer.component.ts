@@ -30,9 +30,9 @@ start() {
   this.interval = setInterval(() => {
     this.time++;
     
-        this.minutes = Math.floor(this.time / 60);
         
-        this.seconds = this.time-(this.minutes * 60)
+        
+        this.seconds = this.time
         
         /** 
         if (Number(this.minutes) < 10) {
